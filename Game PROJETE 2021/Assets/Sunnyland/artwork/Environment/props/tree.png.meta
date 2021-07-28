@@ -1,7 +1,82 @@
 fileFormatVersion: 2
 guid: f7187675ec12e4aacaeb0e97ad31230a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8667466294985060184
+    second: tree_0
+  - first:
+      213: 5281997702118322174
+    second: tree_1
+  - first:
+      213: -3105659087322419395
+    second: tree_2
+  - first:
+      213: -25497680464327838
+    second: tree_3
+  - first:
+      213: -2187617102101193605
+    second: tree_4
+  - first:
+      213: 6962057269733102035
+    second: tree_5
+  - first:
+      213: -3386072866006247602
+    second: tree_6
+  - first:
+      213: 2374228815192248797
+    second: tree_7
+  - first:
+      213: -1328196128117911941
+    second: tree_8
+  - first:
+      213: 6399430291284773974
+    second: tree_9
+  - first:
+      213: 7003882221379653708
+    second: tree_10
+  - first:
+      213: 194759427804239468
+    second: tree_11
+  - first:
+      213: 5332751900989755886
+    second: tree_12
+  - first:
+      213: -2964489705624308281
+    second: tree_13
+  - first:
+      213: -419548402195774346
+    second: tree_14
+  - first:
+      213: -8581346138163503105
+    second: tree_15
+  - first:
+      213: 3677311666092050651
+    second: tree_16
+  - first:
+      213: -1843109872194215613
+    second: tree_17
+  - first:
+      213: 3994245996773873128
+    second: tree_18
+  - first:
+      213: -3704809093847223717
+    second: tree_19
+  - first:
+      213: 5472584832740133722
+    second: tree_20
+  - first:
+      213: -2539089206249953368
+    second: tree_21
+  - first:
+      213: -3162785362237366266
+    second: tree_22
+  - first:
+      213: -637112122996732630
+    second: tree_23
+  - first:
+      213: -8717391948033068406
+    second: tree_24
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,17 +116,17 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 19
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -101,9 +176,44 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
-    outline: []
-    physicsShape: []
+    sprites:
+    - serializedVersion: 2
+      name: tree_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 105
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a09eb0b359f6b780800000000000000
+      internalID: -8667466294985060184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: 52.5, y: 46.5}
+      - {x: -52.5, y: 46.5}
+      - {x: -52.5, y: -46.5}
+      - {x: 52.5, y: -46.5}
+    physicsShape:
+    - - {x: -7.5, y: 21.5}
+      - {x: -21.5, y: 5.5}
+      - {x: -16.5, y: -12.5}
+      - {x: -2.5, y: -22.5}
+      - {x: -13.5, y: -46.5}
+      - {x: 16.5, y: -46.5}
+      - {x: 13.5, y: -23.5}
+      - {x: 27.5, y: -6.5}
+      - {x: 31.5, y: 12.5}
+      - {x: 11.5, y: 25.5}
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
