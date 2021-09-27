@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/saiba mais.unity
     guid: 41f0b688e6e3a464c849aa06cea49504
+  - enabled: 1
+    path: Assets/Scenes/game2.unity
+    guid: 93a754ac301377c459c63196264a2cb1
   m_configObjects: {}
