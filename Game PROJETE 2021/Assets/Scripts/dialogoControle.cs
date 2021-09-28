@@ -13,42 +13,73 @@ public class dialogoControle : MonoBehaviour
 
     [Header("Settings")]
     public float typingSpeed;
-    private string[] sentences;
-    private int index;
-    
 
-    public void Speech(Sprite p, string[] text, string actorName)
-    {
-        dialogueObj.SetActive(true);
-        profile.sprite = p;
-        sentences = text;
-        speechText.text = actorName;
-        StartCoroutine(TypeSentence());
+    [Header("Custom")]
+    [SerializeField()] private GameObject floatingBalloon;
+
+    private IEnumerator sentenceEnumable;
+    public bool isAlreadyOnDialogue { get; private set; }
+    
+    void MonoBehaviour () {
+        this.ResetCanvas();
     }
-    IEnumerator TypeSentence()
+
+    public bool Speech(Sprite p, string[] text, string actorName)
     {
-        foreach (char letter in sentences[index].ToCharArray())
+        if (isAlreadyOnDialogue) return false;
+
+        // set canvas
+        profile.sprite = p;
+        actorNameText.text = actorName;
+
+        sentenceEnumable = _ChangeToNextSentence(text);
+        ToNextSentence();
+
+        return true;
+    }
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        foreach (char letter in sentence)
         {
             speechText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
     }
-    public void NextSentence()
+
+    private void _onDialogueStarted () {
+        isAlreadyOnDialogue = true;
+        dialogueObj.SetActive(true);
+    }
+
+    private void _onDialogueFinished () {
+        isAlreadyOnDialogue = false;
+        dialogueObj.SetActive(false);
+    }
+
+    public void ToNextSentence() {
+        sentenceEnumable.MoveNext();
+    }
+
+    private IEnumerator _ChangeToNextSentence(string[] sentences)
     {
-        if(speechText.text == sentences[index])
-        {
-            if(index < sentences.Length -1)
-            {
-                index++;
-                speechText.text = "";
-                StartCoroutine(TypeSentence());
-            }
-            else
-            {
-                speechText.text="";
-                index = 0;
-                dialogueObj.SetActive(false);
-            }
+        _onDialogueStarted();
+
+        foreach (string sentence in sentences) {
+            this.ResetCanvas();
+            var coroutine = StartCoroutine(TypeSentence(sentence));
+            yield return true; // halts function
+            StopCoroutine(coroutine);
         }
+
+        _onDialogueFinished();
+    }
+
+    public void ResetCanvas () {
+        speechText.text = "";
+    }
+
+    public GameObject GetFloatingBalloon () {
+        return Instantiate(this.floatingBalloon);
     }
 }
