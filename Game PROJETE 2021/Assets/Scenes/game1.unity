@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 20426882}
   - component: {fileID: 20426883}
+  - component: {fileID: 20426884}
   m_Layer: 0
   m_Name: dialogoControle
   m_TagString: Untagged
@@ -172,6 +173,20 @@ MonoBehaviour:
   actorNameText: {fileID: 1994126336}
   typingSpeed: 0.2
   floatingBalloon: {fileID: 5089062253336022109, guid: 0429a332e6704634889008c738a60b12, type: 3}
+--- !u!114 &20426884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20426881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 785d555058707224a83baa33dd89d218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueObj: {fileID: 1658424430}
+  gameOver: {fileID: 1658424430}
 --- !u!1 &118722930
 GameObject:
   m_ObjectHideFlags: 0
@@ -13747,14 +13762,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   profile: {fileID: -6056987297122131021, guid: d348dff3819df794186a80cb95777629, type: 3}
   speechText:
-  - seja
-  - 'bem '
-  - vindo
+  - "Ola, jogador! Se preare para a proxima fase, pois nela come\xE7a os desafios."
   actorName: Ator
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  radious: 3.8
+  radious: 0.5
 --- !u!1 &1799353438
 GameObject:
   m_ObjectHideFlags: 0
@@ -16355,6 +16368,7 @@ GameObject:
   - component: {fileID: 2122354681}
   - component: {fileID: 2122354682}
   - component: {fileID: 2122354683}
+  - component: {fileID: 2122354684}
   m_Layer: 6
   m_Name: player
   m_TagString: Player
@@ -16376,6 +16390,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 6
   JumpForce: 12
+  groundCheck: {fileID: 0}
+  bulletSpawn: {fileID: 0}
+  bulletObject: {fileID: 0}
+  fireRate: 0
+  nextFire: 0
 --- !u!212 &2122354679
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16507,3 +16526,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2122354684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122354677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 785d555058707224a83baa33dd89d218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueObj: {fileID: 0}
+  gameOver: {fileID: 1658424430}

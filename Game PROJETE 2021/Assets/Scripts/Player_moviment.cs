@@ -13,6 +13,15 @@ public class Player_moviment : MonoBehaviour
     private bool DobleJump;
     private Animator anim;
 
+    //------variaveis tiro------
+    public Transform groundCheck;
+    public Transform bulletSpawn;
+    public GameObject bulletObject;
+    public float fireRate;
+    public float nextFire;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +34,11 @@ public class Player_moviment : MonoBehaviour
     {
         Move();
         Jump();
+
+        //----------tiro---------
+        if(Input.GetButton("Fire1")){
+            Fire();
+        }
     }
 
     void Move()
@@ -92,6 +106,14 @@ public class Player_moviment : MonoBehaviour
             isJumping = true;  
               
         }
+    }
+
+    //------tiro--------------
+    void Fire (){
+        nextFire = Time.time + fireRate;
+        GameObject cloneBullet = Instantiate (bulletObject, bulletSpawn.position, bulletSpawn.rotation);
+
+
     }
 
     

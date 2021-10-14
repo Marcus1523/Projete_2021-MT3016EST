@@ -17,9 +17,9 @@ public class morrer : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("r")) //renicia o jogo
+        if (Input.GetKeyDown("r")) //vai para a aba menu
         { 
-        SceneManager.LoadScene("game1");
+        SceneManager.LoadScene("menu");
         } 
     }
 
