@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class CodMaoMenu : MonoBehaviour
 {
 
+
+      public GameObject gameOver;
+
     void Update()
     {
 
@@ -16,6 +19,7 @@ public class CodMaoMenu : MonoBehaviour
         *
         */
         //--------------Scene menu-----------------
+  
         if(Input.GetKeyDown("c")) //botão jogar
         {
             SceneManager.LoadScene("game1");
@@ -31,17 +35,29 @@ public class CodMaoMenu : MonoBehaviour
             SceneManager.LoadScene("saiba mais");
         }
 
-        //dentro da Scene instruções:
-         if(Input.GetKeyDown("b")) //botão voltar
+
+        //dentro da Scene instruções e Saiba Mais
+         if(Input.GetKeyDown("b")) 
         {
             SceneManager.LoadScene("menu");
         }
 
-        //dentro da Scene instruções:
-         if(Input.GetKeyDown("b")) //botão voltar
+        //dotão reset gamever
+         if(Input.GetKeyDown("p")) 
         {
             SceneManager.LoadScene("menu");
         }
+          if(Input.GetKeyDown("r")) 
+        {
+            SceneManager.LoadScene("menu");
+        }
+
+        if(Input.GetKeyDown("e")) //
+        {
+            gameOver.SetActive(false);
+        }
+
+
 
     
     }

@@ -36,7 +36,7 @@ public class Player_moviment : MonoBehaviour
         Jump();
 
         //----------tiro---------
-        if(Input.GetButton("Fire1")){
+        if(Input.GetKeyDown(KeyCode.F) && Time.time > nextFire){
             Fire();
         }
     }
@@ -112,6 +112,8 @@ public class Player_moviment : MonoBehaviour
     void Fire (){
         nextFire = Time.time + fireRate;
         GameObject cloneBullet = Instantiate (bulletObject, bulletSpawn.position, bulletSpawn.rotation);
+        //GameObject cloneBullet = Instantiate(bulletObject, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+
 
 
     }

@@ -17,9 +17,18 @@ public class DeletDialogo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("e")) //botão jogar
-        {
-            gameOver.SetActive(false); //"ativa" o canvas
+/*
+        if (Input.GetKeyDown("e")) {
+        bool isActive = gameOver.activeSelf;
+        gameOver.SetActive(!isActive);
         }
+*/
+
+/*
+        if(Input.GetKeyDown("e"))
+        {
+            gameOver.SetActive(true); //"ativa" o canvas
+        }
+*/
     }
 }

@@ -35,6 +35,7 @@ public class Dialogo : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && onRadius)
         {
             dc.Speech(profile, speechText, actorName);
+            
         }
     }
 

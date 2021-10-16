@@ -7,9 +7,11 @@ public class TIRO : MonoBehaviour
 
     public float speed;
     private float timeDestroy;
+     private Rigidbody2D rig;
     // Start is called before the first frame update
     void Start()
     {
+         rig = GetComponent<Rigidbody2D>(); 
         timeDestroy = 1.0f; // 1 segundo
         Destroy(gameObject, timeDestroy);
     }

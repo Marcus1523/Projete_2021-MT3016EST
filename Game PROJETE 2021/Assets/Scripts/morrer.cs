@@ -17,14 +17,17 @@ public class morrer : MonoBehaviour
 
     void Update()
     {
+        
         if (Input.GetKeyDown("r")) //vai para a aba menu
         { 
         SceneManager.LoadScene("menu");
         } 
+
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
+
         if(collider.gameObject.layer == 15)
         {
             gameOver.SetActive(true); //"ativa" o canvas
